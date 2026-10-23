@@ -109,7 +109,7 @@ html_body = re.sub(r"<table>.*?</table>", label_table, html_body, flags=re.S)
 REPO = "https://github.com/entresol/zero-os"
 revisions = [
     ("2026-10-23-v0.8", None,
-     "Section 1 opens with the motivation for everything else: Don't trust the agent. Verify the system. The agent is treated as a Byzantine component; the size of the system follows from the reference monitor's oldest requirement, to be small enough to be analysed and tested."),
+     "The name is marked as a working title. Section 1 opens with the motivation for everything else: Don't trust the agent. Verify the system. The agent is treated as a Byzantine component; the size of the system follows from the reference monitor's oldest requirement, to be small enough to be analysed and tested."),
     ("2026-10-23-v0.7", "2a9d5b7",
      "The abstract states the thesis up front: zOS does not try to make AI trustworthy, it stays safe although the agent is not. Section 5 adds AgenticOS and Agent libOS as designs for the broker's job and the first verified LionsOS driver. He et al. cited in its OSDI '26 version."),
     ("2026-10-23-v0.6", "0459cdc",
@@ -163,7 +163,7 @@ page = f"""<!doctype html>
     <h1>Imagine it's 1991</h1>
     <p class="lede">We are about to release a few lines of code into a world that will be very different from today.</p>
     <div class="titleblock">
-      <p class="name">zOS – Zero OS</p>
+      <p class="name">zOS – Zero OS<a class="star" href="#working-title" aria-label="About the name">*</a></p>
       <p class="sub">Bare minimum. Verified. Real-time. An OS for the AI era.</p>
       <p class="ver">Working paper {CURRENT_VERSION} · <a href="#revisions">latest changes</a></p>
     </div>
@@ -180,7 +180,7 @@ page = f"""<!doctype html>
 {html_body}
   </article>
 </div>
-<footer><div><span>zOS – Zero OS. Working paper {CURRENT_VERSION}. <a href="https://github.com/entresol/zero-os">Source and discussion on GitHub</a>. Text and figures: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</span><a href="{pdf_name}">Download the PDF</a></div></footer>
+<footer><div><span>zOS – Zero OS. Working paper {CURRENT_VERSION}. <a href="https://github.com/entresol/zero-os">Source and discussion on GitHub</a>. Text and figures: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</span><span id="working-title">* zOS is a working title. Before its first release the project gets a name of its own, one that treads on nobody's toes, mainframes included.</span><a href="{pdf_name}">Download the PDF</a></div></footer>
 </body>
 </html>
 """

@@ -70,6 +70,8 @@ h1, h2, .titleblock .name {
 .titleblock p { margin: 0; }
 .titleblock .name { font-size: clamp(40px, 4.4vw, 48px); line-height: 1.05; letter-spacing: -0.03em; margin-bottom: 0.5rem; }
 .titleblock .sub { color: var(--muted); }
+.titleblock .star { color: var(--accent); text-decoration: none; font-size: 0.55em; vertical-align: super; margin-left: 0.05em; }
+footer #working-title { flex-basis: 100%; }
 .actions { margin-top: 2.2rem; display: flex; flex-wrap: wrap; gap: 0.8rem 1.6rem; align-items: center; }
 .btn {
   font: 600 1.125rem/1.3 var(--font-text); color: var(--ink-deep);
